@@ -67,7 +67,7 @@ def segment_worker(X, XK, X_tilde, XK_tilde, a, b, Mobs, Oobs, Lobs, n, nK, p, Q
     return intervals, oc_intervals
 
 
-def divide_and_conquer(X, XK, a, b, Mobs, Oobs, Lobs, n, nK, p, lambda_sh, lambda_K, rho, z_min, z_max, num_segments=96):
+def divide_and_conquer(X, XK, a, b, Mobs, Oobs, Lobs, n, nK, p, lambda_sh, lambda_K, rho, z_min, z_max, num_segments=24):
     seg_w = (z_max - z_min) / num_segments
     segments = [(z_min + i * seg_w, z_min + (i + 1) * seg_w) for i in range(num_segments)]
     n_jobs = min(num_segments, os.cpu_count())
@@ -215,7 +215,7 @@ def segment_worker_dtf(X_tilde, XK, a, b, c, d, Mobs, Oobs, Lobs, SMobs, SOobs, 
     return intervals, oc_intervals
 
 
-def divide_and_conquer_dtf(X_tilde, XK, a, b, c, d, Mobs, Oobs, Lobs, SMobs, SOobs, SLobs, q_tilde, lambda_tilde, P, n, nK, K, z_min, z_max, num_segments=96):
+def divide_and_conquer_dtf(X_tilde, XK, a, b, c, d, Mobs, Oobs, Lobs, SMobs, SOobs, SLobs, q_tilde, lambda_tilde, P, n, nK, K, z_min, z_max, num_segments=24):
     seg_w = (z_max - z_min) / num_segments
     segments = [(z_min + i * seg_w, z_min + (i + 1) * seg_w) for i in range(num_segments)]
     n_jobs = min(num_segments, os.cpu_count())
