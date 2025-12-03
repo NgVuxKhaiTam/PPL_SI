@@ -1,6 +1,6 @@
 # PPL-SI: Pretrained Penalized Lasso Selective Inference
 
-**PPL-SI** is a Python package for conducting valid statistical inference in high-dimensional regression with transfer learning using Pretrained Lasso and DTransFusion algorithms. It implements selective inference methods to control the false positive rate (FPR) while maintaining high true positive rate (TPR) in feature selection after transfer learning.
+**PPL-SI** is a Python package for conducting valid statistical inference in high-dimensional regression with transfer/distributed learning using Pretrained Lasso and DTransFusion algorithms. It implements selective inference methods to control the false positive rate (FPR) while maintaining high true positive rate (TPR) in feature selection after transfer learning.
 
 ## Features
 
